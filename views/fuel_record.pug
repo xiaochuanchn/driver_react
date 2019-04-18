@@ -1,0 +1,32 @@
+extends layout/base
+
+
+block link_block
+    link(rel="stylesheet", href="stylesheets/fuel_record.css")
+
+block body_block 
+    .add_new_container(id='add_new')
+        .record_info_container
+            p(onclick="dismiss_add_new_container()" style="cursor: pointer;margin-bottom:0;align-self: flex-start;margin-top: -30px;margin-left:-30px") X
+            p(style="font-size:20px;color:#333;font-weight:bold") ADD NEW RECORD
+            .input_container
+                input(type="text" placeholder='PLATE NUMBER' id='plate_number' readonly="readonly")
+                input(type="text" placeholder='AMOUNT' id='amount' onkeyup="onlyNum(this)")
+                select(id="location_select")
+            button(style='border-style:solid;border-width:0px;height:54px;width:403px;background-color:#444;outline:none;color:white;border-radius:5px;margin-top:30px' onclick="submit_new_record()") SUBMIT
+
+
+block content_block
+    .all_container
+        .top_div
+            .top_left_div
+                .shu_line(style='height: 20px;width: 3px;background-color: #444;')
+                p(style='cursor:pointer;color:#444;font-size:16px;font-weight:bold;margin-left:10px;margin-bottom:0;' id='record_title' onclick="mobile_act()") AUTOMOBILE MANAGEMENT
+
+            .top_right_div
+                button(style='height:44px;width:176px;margin-left:20px;border-radius:4px;background-color:#e4e4e4;border-style: solid;border-width:0px;color:#666;cursor:pointer;font-size:14px' onclick="add_new_act()") ADD NEW RECORD
+
+        .form_div(id="form")
+
+block script_block
+    script(src="javascripts/fuel_record.js" type="text/javascript")

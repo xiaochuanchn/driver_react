@@ -1,0 +1,145 @@
+.all_container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px;
+    width: 100%;
+    padding: 45px;
+    overflow-y: scroll;
+}
+
+.top_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 80px;
+    max-height: 80px
+}
+
+.top_left_div {
+    min-width: 100px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 45px
+}
+
+.top_right_div {
+    min-width: 100px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-right: 45px
+}
+
+.add_new_container {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 74px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.car_info_container {
+    background-color: white;
+    width: 507px;
+    height: 428px;
+    border-radius: 5px;
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    padding: 52px;
+}
+
+.input_container {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+
+}
+
+.input_container input {
+    width: 403px;
+    margin-bottom: 28px;
+    outline: none;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #e4e4e4;
+    font-size: 14px;
+}
+
+.line_title {
+    min-height: 46px;
+    min-width: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.line_title p {
+    margin-bottom: 0;
+    width: 12.5%;
+    margin-left: 10px;
+    
+}
+
+.content_line {
+    min-height: 46px;
+    min-width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_line p {
+    margin-bottom: 0;
+    width: 12.5%;
+    margin-left: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.act_need {
+    cursor: pointer;
+}
+
+.page_container {
+    width: 100%;
+    min-height: 22px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.page_container p {
+    background-color: #444;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    color: white;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.page_container .select_page {
+    background-color: #999
+}

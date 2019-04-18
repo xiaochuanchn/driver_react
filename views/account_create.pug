@@ -1,0 +1,23 @@
+extends layout/base
+
+
+block link_block
+    link(rel="stylesheet", href="stylesheets/account_create.css")
+block content_block
+    div.content_area
+        h1 CREATE A NEW ACCOUNT
+        div.input_content_area
+            div.input_area
+                span USER NAME
+                input(id="user_name", value=user) 
+            div.input_area
+                span PASSWORD
+                input(id="password")
+            div.input_area
+                span TYPE
+                input(id="type" value=auth_type) 
+            button(onclick="creat_account()") SUBMIT
+
+
+block script_block
+    script(src="javascripts/account_create.js" type="text/javascript")

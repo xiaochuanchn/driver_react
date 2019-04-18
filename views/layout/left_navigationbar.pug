@@ -1,0 +1,29 @@
+aside.left_container
+    if is_client_account
+        ul(id="left_ul")
+            li(onclick="driver_manager_page()" id="drver_maneger_page") 
+                img(src="images/driver.png", alt="")
+                p DRIVER MANAGERMENT
+            li(onclick="daily_work()" id="daily_work") 
+                img(src="images/work.png", alt="")
+                p DAILY WORK
+            li(onclick="leave_record()" id="leave_record") 
+                img(src="images/leave_record.png", alt="")
+                p LEAVE RECORD
+            li(onclick="accident()" id="accident") 
+                img(src="images/leave_record.png", alt="")
+                p ACCIDENT / INCIDENT REPORT 
+            li(onclick="automobile_manager()" id="automobile_management")
+                img(src="images/car.png", alt="")
+                p CAR MANAGEMENT
+            li(onclick="client_maneger_page()" id="client_maneger_page") 
+                img(src="images/admin.png", alt="")
+                p CLIENT MANAGERMENT
+            li(onclick="account_maneger_page()" id="account_maneger_page") 
+                img(src="images/admin.png", alt="")
+                p ACCOUNT MANAGERMENT
+    else 
+        ul(id="left_ul")
+            li(onclick="daily_work()" id="daily_work") 
+                img(src="images/work.png", alt="")
+                p DAILY WORK

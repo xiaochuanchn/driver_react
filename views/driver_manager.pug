@@ -1,0 +1,57 @@
+extends layout/base
+
+
+block link_block
+    link(rel="stylesheet", href="stylesheets/driver_manager.css")
+
+block body_block 
+    div.edit_user_password(id="edit_user_password")
+        div.driver_info_container()
+            p.pointer(onclick="hidden_edit_toast()") X
+            h5(id="edit_user_title") CREATE DIRVER ACCOUNT
+            .input_container
+                input(type="text" id="edit_user_name" placeholder="username" readonly)
+                input(type="text" id="edit_password" placeholder="password")
+            button(onclick="submit_edt_user()" style='cursor:pointer') SUBMIT
+    div.create_toast(id="create_toast")
+        div.driver_info_container()
+            p.pointer(onclick="hidden_toast()") X
+            h5 CREATE DIRVER ACCOUNT
+            h7 BASIC INFORMATION
+            .input_container
+                input(type="text" id="user_name" placeholder="Name")
+                //- input(type="text" id="sex" placeholder="Sex")
+                select(id="sex")
+                    option(value="MALE") MALE
+                    option(value="FEMALE") FEMALE
+                input(type="text" id="age" placeholder="Age")
+                input(type="text" id="phone_number" placeholder="Phone number")
+                select(id="car_plate_number")
+            h7 LOGIN ACCOUNT
+            .input_container
+                input(type="text" id="user" placeholder="Login user name")
+                input(type="text" id="password" placeholder="Password")
+            button(onclick="submit_driver_account()"  style='cursor:pointer') SUBMIT
+
+block content_block
+    .drivers_container
+        div.create_container 
+            .noting
+                .line_shu
+                p DRIVER MANAGERMENT
+            button(style="color:#666;font-size:14px;border-radius:4px;height:44px;width:218px;background-color:#e4e4e4;border-style:solid;border-width:1px;border-color:#e6e6e6;cursor:pointer;margin-right:30px" onclick="create_driver_account()") CREATE A DRIVER ACCOUNT
+        .content_container(id="driver_container")
+            .line.title_line(id="line0")
+                p NAME
+                p SEX
+                p AGE
+                p PHONE NUMBER
+                p CAR PLATE NUMBER
+                p VIEW MORE
+
+    
+
+
+block script_block
+
+    script(src="javascripts/driver_manager.js" type="text/javascript")
